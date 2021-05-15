@@ -1,0 +1,152 @@
+.navBar {
+  width: 100%;
+  min-height: 70px;
+  padding: 20px 0px;
+  background: #141414;
+  position: fixed;
+  z-index: 2;
+  border-bottom: 3px solid #6ac045;
+}
+
+.navBar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navBar .container .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar .container #burgerMenu {
+  color: #6ac045;
+  cursor: pointer;
+  display: none;
+}
+
+.fa-bars {
+  font-size: 28px;
+}
+
+.fa-times {
+  font-size: 33px;
+}
+
+.navlink {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  margin-right: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+.navlink:hover {
+  transition: 0.3s ease-in-out;
+  color: #6ac045;
+}
+
+.activeNavLink {
+  color: #6ac045;
+}
+
+.navLogo {
+  font-size: 26px;
+  color: #6ac045;
+  font-weight: 600;
+  /* user-select: none; */
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.navMenu {
+  padding-left: 80px;
+}
+
+.navSearch {
+  height: 45px;
+  min-height: 45px;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #6ac045;
+  background: transparent;
+  padding: 10px 15px;
+  width: 240px;
+  color: #76c952;
+  font-size: 15px;
+  border-radius: 0px;
+}
+
+input::placeholder {
+  color: #76c952;
+  letter-spacing: 0.4px;
+}
+
+@media screen and (max-width: 991px) {
+  .navlink {
+    font-size: 20px;
+  }
+
+  .navMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px 30px;
+    /* width: 50%;
+    min-width: 40vw; */
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 800ms ease-in-out;
+    z-index: 111;
+  }
+
+  .navMenuHidden {
+    left: -300px;
+    opacity: 0;
+  }
+
+  input {
+    width: 220px;
+  }
+
+  .navBar .container #burgerMenu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  
+  .navBar .container .wrapper {
+   
+    margin-left: 15px;
+  }
+
+  .navBar .container #burgerMenu {
+
+    margin-right: 15px;
+  }
+
+  input {
+  
+    width: 155px;
+    font-size: 14px;
+    padding: 5px 5px;
+    margin-top: 5px;
+  }
+
+
+}

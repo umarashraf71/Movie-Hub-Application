@@ -1,0 +1,135 @@
+.slick-prev {
+  left: 26px;
+  z-index: 1;
+  top: 45%;
+}
+
+.slick-next {
+  right: 26px;
+  z-index: 1;
+  top: 45%;
+}
+
+.slick-prev:before {
+  content: "\f104";
+  font-family: "FontAwesome";
+  color: #40b90d;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.slick-next:before {
+  content: "\f105";
+  font-family: "FontAwesome";
+  font-weight: bold;
+  color: #40b90d;
+  font-size: 60px;
+}
+
+.card {
+  position: relative;
+  border: 0px;
+  border-radius: 0;
+  background-color: black;
+  /* transition: background 0.5s ease-in-out; */
+  overflow: hidden;
+}
+
+.image-container {
+  display: block;
+  width: 100%;
+  height: 400px;
+  transition: transform 0.2s;
+}
+
+.image-container:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  /* background: rgb(0, 0, 0); */
+  background: rgba(0, 0, 0, 0.85); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card h4 {
+
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+
+.card h5 {
+
+  color: #6ac045;
+  font-size: 17px;
+}
+
+/* .slick-arrow {
+  background-color: red;
+} */
+
+/* .slick-prev:before, .slick-next:before {
+
+} */
+
+@media screen and (max-width: 500px) {
+  /* .slick-arrow {
+      display: none !important;
+    }
+   */
+  .overlay {
+    font-size: 10px;
+    padding: 7px;
+    text-align: center;
+  }
+  .image-container {
+    height: 300px;
+ }
+}
+
+@media screen and (max-width: 767px) {
+  .slick-prev:before {
+    font-size: 47px;
+  }
+  .slick-next:before {
+    font-size: 47px;
+  }
+
+  .overlay {
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .overlay {
+    font-size: 15px;
+    padding: 15px;
+    text-align: center;
+  }
+  .image-container {
+     height: 350px;
+  }
+}
