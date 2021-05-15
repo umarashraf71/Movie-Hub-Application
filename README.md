@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-A simple movie application made in React JS with TMDb movie API.
+A simple movie application made in React JS (context API) with TMDb movie API.
 
 ## Live Demo
 
